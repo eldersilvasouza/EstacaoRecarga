@@ -10,7 +10,6 @@ namespace EstacaoRecarga.Domain.Interfaces.Repositories
         Task<T> GetById(Guid guid);
         Task SaveAsync(T obj);
         Task UpdateAsync(T obj);
-
         Task<bool> DeleteAsync(T obj);
     }
 }

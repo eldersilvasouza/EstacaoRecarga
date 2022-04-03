@@ -7,35 +7,35 @@ using System.Threading.Tasks;
 
 namespace EstacaoRecarga.Application
 {
-    public class RecargaApplication : IRecargaService
+    public class RecargaApplication : IRecargaApplication
     {
+        private readonly IRecargaService _recargaService;
 
-
-
-
-        public async Task<Estacao> AtualizarRecarga(Estacao estacaoRecarga)
+        public RecargaApplication(IRecargaService recargaService)
         {
-            throw new NotImplementedException();
+            _recargaService = recargaService;
         }
 
-        public async  Task<bool> DeletarEstacao(Guid id)
+        public async  Task<Estacao> AtualizarRecarga(Estacao estacaoRecarga)
         {
-            throw new NotImplementedException();
+            await _recargaService.AtualizarRecarga(estacaoRecarga);
+            return estacaoRecarga;
         }
 
-        public async Task<Estacao> IncluirRecarga(Estacao estacaoRecarga)
+        public async  Task<Estacao> IncluirRecarga(Estacao estacaoRecarga)
         {
-            throw new NotImplementedException();
+            await _recargaService.IncluirRecarga(estacaoRecarga);
+            return estacaoRecarga;
         }
 
-        public async  Task<List<Estacao>> ListarEstacoes()
+        public async Task<Estacao> PesquisarEstacao(Guid id)
         {
-            throw new NotImplementedException();
+            return await _recargaService.PesquisarEstacao(id);
         }
 
-        public async  Task<Estacao> PesquisarEstacao(Guid id)
+        public async Task<List<Estacao>> PesquisarEstacoes()
         {
-            throw new NotImplementedException();
+            return await _recargaService.ListarEstacoes();
         }
     }
 }
