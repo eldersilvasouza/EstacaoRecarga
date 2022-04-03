@@ -3,3 +3,11 @@
 ################################################################################
 
 /EstacaoRecarga/EstacaoRecarga/obj
+/EstacaoRecarga/EstacaoRecarga.Web/obj
+/EstacaoRecarga/EstacaoRecarga.Application/bin/Debug/netcoreapp3.1
+/EstacaoRecarga/EstacaoRecarga.Application/obj
+/EstacaoRecarga/EstacaoRecarga.Data/obj
+/EstacaoRecarga/EstacaoRecarga.Domain/bin/Debug/netcoreapp3.1
+/EstacaoRecarga/EstacaoRecarga.Domain/obj
+/EstacaoRecarga/EstacaoRecarga.Service/obj
+/EstacaoRecarga/EstacaoRecarga.Web/bin/Debug/netcoreapp3.1
