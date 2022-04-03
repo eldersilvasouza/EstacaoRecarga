@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace EstacaoRecarga.Domain.Interfaces.Repositories
 {
-    public interface IRepositoryBase
+    public interface IRepositoryBase<T> where T : class
     {
+        Task<List<T>> GetAllAsync();
+        Task<T> GetById(Guid guid);
+        Task SaveAsync(T obj);
+        Task UpdateAsync(T obj);
+
+        Task<bool> DeleteAsync(T obj);
     }
 }

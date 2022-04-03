@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacaoRecarga.Data", "Esta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacaoRecarga.Application", "EstacaoRecarga.Application\EstacaoRecarga.Application.csproj", "{6EA0FD7A-38FE-4FAB-B7BF-26C7C565320B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - UI", "0 - UI", "{3B8F1BC1-ED19-4339-B356-F9B6CE6BA78D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{43A0795E-3041-43FD-BFF1-DEE13DD11C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{B8CC2F77-A32C-4D67-B4BC-8A173181FCBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Data", "3 - Data", "{2E78E026-5D81-4789-9785-1B3D8C65E38B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2FDFAFDA-BBEF-4ECE-8B7A-64BC70FC8961} = {3B8F1BC1-ED19-4339-B356-F9B6CE6BA78D}
+		{4767BFA3-C530-4A2E-8E3E-00807F04951E} = {B8CC2F77-A32C-4D67-B4BC-8A173181FCBD}
+		{5BAC4A75-1524-4740-8E13-3637CEB33AE8} = {2E78E026-5D81-4789-9785-1B3D8C65E38B}
+		{6EA0FD7A-38FE-4FAB-B7BF-26C7C565320B} = {43A0795E-3041-43FD-BFF1-DEE13DD11C1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E08EC3-2BB0-4572-B13A-7F73193C28CB}

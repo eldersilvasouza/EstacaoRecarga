@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "EstacaoRecarga.Data/1.0.0": {
+        "dependencies": {
+          "EstacaoRecarga.Domain": "1.0.0"
+        },
         "runtime": {
           "EstacaoRecarga.Data.dll": {}
+        }
+      },
+      "EstacaoRecarga.Domain/1.0.0": {
+        "runtime": {
+          "EstacaoRecarga.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "EstacaoRecarga.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EstacaoRecarga.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
