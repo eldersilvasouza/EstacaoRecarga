@@ -23,6 +23,7 @@ namespace EstacaoRecarga.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Configs.DependecyInjection.ResolveDependecies(services);
             services.AddControllersWithViews();
         }
 
@@ -52,6 +53,8 @@ namespace EstacaoRecarga.Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }

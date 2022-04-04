@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EstacaoRecarga.Application\EstacaoRecarga.Application.csproj" />
+    <ProjectReference Include="..\EstacaoRecarga.Data\EstacaoRecarga.Data.csproj" />
     <ProjectReference Include="..\EstacaoRecarga.Domain\EstacaoRecarga.Domain.csproj" />
   </ItemGroup>
 

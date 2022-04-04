@@ -1,38 +1,50 @@
 ﻿using EstacaoRecarga.Domain.Interfaces.Repositories;
+using EstacaoRecarga.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EstacaoRecarga.Data.Repositories
 {
-    public class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public class RepositoryBase<T> : IRepositoryBase<T> where T : class, IEntity, new()
     {
-      
 
-        public Task<bool> DeleteAsync(T obj)
+        protected readonly EstacaoContext estacaoContext;
+
+        public RepositoryBase(EstacaoContext context)
         {
-            throw new NotImplementedException();
+            estacaoContext = context ?? throw new ArgumentException(nameof(context));
+        }
+
+        public  async Task DeleteAsync(T obj)
+        {
+            estacaoContext.Set<T>().Remove(obj);
+            await estacaoContext.SaveChangesAsync();
         }
 
         public async Task<List<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await estacaoContext.Set<T>().ToListAsync();
         }
 
         public async Task<T> GetById(Guid guid)
         {
-            throw new NotImplementedException();
+            return await estacaoContext.Set<T>().Where(x => x.Id == guid).FirstOrDefaultAsync();
         }
 
         public async Task SaveAsync(T obj)
         {
-            throw new NotImplementedException();
+            await estacaoContext.Set<T>().AddAsync(obj);
+            await estacaoContext.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(T obj)
         {
-            throw new NotImplementedException();
+            estacaoContext.Entry(obj).State = EntityState.Modified;
+            await estacaoContext.SaveChangesAsync();
         }
     }
 }
