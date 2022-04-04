@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace EstacaoRecarga.Web
 {
@@ -24,6 +25,10 @@ namespace EstacaoRecarga.Web
         public void ConfigureServices(IServiceCollection services)
         {
             Configs.DependecyInjection.ResolveDependecies(services);
+
+            
+            
+
             services.AddControllersWithViews();
         }
 
@@ -44,7 +49,7 @@ namespace EstacaoRecarga.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-
+           
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
